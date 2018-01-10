@@ -1,7 +1,7 @@
 <div id="page">
-  <nav include-replace ng-include="'partials/nav.html'"></nav>
+  <nav du-spy-context include-replace ng-include="'partials/nav.html'"></nav>
 
-  <header id="fh5co-header" class="fh5co-cover percent repeat" role="banner" style="background-image:url(/images/card-components/share-animation-zoomed-out.gif);" data-stellar-background-ratio="1.1">
+  <header id="project-0" du-scrollspy="project-0" class="fh5co-cover percent repeat fh5co-header" role="banner" style="background-image:url(/images/card-components/share-animation-zoomed-out.gif);" data-stellar-background-ratio="1.1">
     <div class="overlay"></div>
     <div class="container-fluid">
       <div class="display-t">
@@ -17,7 +17,7 @@
    </div>
  </header>
 
- <div id="fh5co-project" class="fh5co-section fh5co-section--white ">
+ <div id="project-1" du-scrollspy="project-1" class="fh5co-section fh5co-section--white">
    <div class="container-fluid">
      <div class="row row-pb-md">
        <div class="col-md-8 col-md-offset-2 text-left fh5co-heading">
@@ -27,9 +27,8 @@
     </div>
     <div class="row row-pb-md">
       <div class="col-md-7 text-left fh5co-heading animate-box" data-animate-effect="fadeInUp">
-        <video video-player poster="images/card-components/minted.jpg" src="images/card-components/minted.mp4" class="img-responsive play-on-scroll"></video>
+        <video poster="images/card-components/minted.jpg" src="images/card-components/minted.mp4" class="img-responsive play-on-scroll"></video>
       </div>
-      <!-- <div style="min-height: 7em;" class="spacer hidden-xs"></div> -->
       <div class="col-md-5 text-left fh5co-heading animate-box" data-animate-effect="fadeInUp">
         <img src="images/card-components/minted-hand.jpg" alt="Free HTML5 Website Template by gettemplates.co" class="img-responsive">
       </div>
@@ -44,17 +43,18 @@
     </div>
   </div>
 </div>
-<div class="fh5co-bg fh5co-section fh5co-section--black" style="background-image: url('images/card-components/banner.jpg');">
+
+<div id="project-2" du-scrollspy="project-2" class="fh5co-bg fh5co-section fh5co-section--black" style="background-image: url('images/card-components/banner.jpg');">
   <div class="overlay"></div>
   <div class="container-fluid">
-    <div class="row animate-box">
+    <div class="row animate-box"  data-animate-effect="fadeInUp">
       <div class="col-md-10 col-md-offset-1 text-center fh5co-heading">
         <h1>I designed and developed mobile-first web interactions for our product and external clients.</h1>
       </div>
     </div>
   </div>
 </div>
-<div class="fh5co-section fh5co-section--white">
+<div id="project-3" du-scrollspy="project-3" class="fh5co-section fh5co-section--white">
  <div class="container-fluid">
   <div class="row row-pb-md">
    <div class="col-md-8 col-md-offset-2 text-left fh5co-heading">
@@ -65,7 +65,7 @@
  </div>
  <div class="row row-pb-md">
    <div class="col-md-6 fh5co-project fh5co-heading" data-animate-effect="fadeInUp">
-     <video src="images/card-components/share-animation.mp4" poster="/images/card-components/share-animation.jpg" class="img-responsive play-on-scroll" controls></video>
+     <video src="images/card-components/share-animation.mp4" poster="/images/card-components/share-animation.jpg" class="img-responsive play-on-scroll"></video>
    </div>
    <div class="col-md-6 fh5co-project fh5co-heading" data-animate-effect="fadeInUp">
      <img src="images/card-components/cart-animation.gif" alt="Free HTML5 Website Template by gettemplates.co" class="img-responsive">
@@ -83,7 +83,7 @@
 </div>
 </div>
 </div>
-<div class="fh5co-section fh5co-section--black">
+<div id="project-4" du-scrollspy="project-4" class="fh5co-section fh5co-section--black">
   <div class="container-fluid">
    <div class="row animate-box" data-animate-effect="fadeIn">
     <div class="col-md-5 col-md-offset-1 text-left fh5co-heading">
@@ -104,7 +104,7 @@
 </div>
 </div>
 </div>
-<div class="fh5co-section fh5co-section--white">
+<div id="project-5" du-scrollspy="project-5" class="fh5co-section fh5co-section--white">
   <div class="container-fluid">
    <div class="row row-pb-md animate-box" data-animate-effect="fadeIn">
     <div class="col-md-8 col-md-offset-2 text-left fh5co-heading">
@@ -120,7 +120,7 @@
  </div>
 </div>
 </div>
-<div class="fh5co-section fh5co-section--black">
+<div id="project-6" du-scrollspy="project-6" class="fh5co-section fh5co-section--black">
   <div class="container">
     <div class="row ">
       <div class="col-md-10 fh5co-project animate-box fh5co-heading" data-animate-effect="fadeIn">
@@ -128,7 +128,7 @@
         <h3>Bold Modern Family</h3>
       </div>
       <div class="col-md-2 fh5co-project animate-box fh5co-heading pull-right" data-animate-effect="fadeIn">
-      <p><a href="#!/micro-app-templates">More Templates <i class="icon-chevron-thin-right"></i></a></p>
+      <p><a href="/micro-app-templates">More Templates <i class="icon-chevron-thin-right"></i></a></p>
       </div>
     </div>
     <div class="row scrolling">
@@ -153,7 +153,7 @@
    </div>
  </div>
 </div>
-<div class="fh5co-section fh5co-section--white">
+<div id="project-7" du-scrollspy="project-7" class="fh5co-section fh5co-section--white">
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-5 col-md-offset-1 text-left fh5co-heading">
@@ -167,7 +167,7 @@
    </div>
  </div>
 </div>
-<div class="fh5co-section fh5co-section--white">
+<div id="project-8" du-scrollspy="project-8" class="fh5co-section fh5co-section--white">
   <div class="container">
     <div class="row ">
       <div class="col-md-12 text-left fh5co-heading">

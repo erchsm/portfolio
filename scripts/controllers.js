@@ -9,6 +9,22 @@
     // $scope.nav =  {
       // return ($location.path().substr(0, path.length) === path) ? 'active' : '';
     // }
+    $scope.$on('duScrollspy:becameActive', function($event, $element, $target){
+      //Automaticly update location
+      if (angular.element($element).prop("tagName") != "A") {
+        console.log($element);
+        if(!angular.element($element).hasClass('fh5co-section--white')) {
+          $('.js-fh5co-nav-toggle').addClass('fh5co-nav-white');
+        } else {
+          $('.js-fh5co-nav-toggle').removeClass('fh5co-nav-white');
+        }
+      }
+      // var hash = $element.prop('hash');
+      // if (hash) {
+      //   history.replaceState(null, null, hash);
+      // }
+    });
+
     $scope.isMobile = {
       Android: function() {
         return navigator.userAgent.match(/Android/i);
@@ -78,38 +94,38 @@
       video.play();
     };
 
-    $scope.burgerWayPoint = function() {
-      $('#fh5co-header').waypoint( function( direction ) {
-        if (direction == 'up') {
-          $('.js-fh5co-nav-toggle').addClass('fh5co-nav-white');
-        }
-      } , { offset: function() {
-        return -this.element.clientHeight;
-      } } );
-      $('.fh5co-section').each(function() {
-        $(this).waypoint( function( direction ) {
-          if (direction == 'down') {
-            if(this.element.classList.contains('fh5co-section--white'))
-              $('.js-fh5co-nav-toggle').removeClass('fh5co-nav-white');
-            if(this.element.classList.contains('fh5co-section--black'))
-              $('.js-fh5co-nav-toggle').addClass('fh5co-nav-white');
-          }
-        } , { offset: '5%' } );
-      });
-      $('.fh5co-section').each(function() {
-        $(this).waypoint( function( direction ) {
-          if (direction == 'up') {
-            if(this.element.classList.contains('fh5co-section--white'))
-              $('.js-fh5co-nav-toggle').removeClass('fh5co-nav-white');
-            if(this.element.classList.contains('fh5co-section--black'))
-              $('.js-fh5co-nav-toggle').addClass('fh5co-nav-white');
-          }
-        } , { offset: function() {
-          return -this.element.clientHeight;
-        } } );
-      });
-      // $('.js-fh5co-nav-toggle').addClass('fh5co-nav-white');
-    };
+    // $scope.burgerWayPoint = function() {
+    //   $('#fh5co-header').waypoint( function( direction ) {
+    //     if (direction == 'up') {
+    //       $('.js-fh5co-nav-toggle').addClass('fh5co-nav-white');
+    //     }
+    //   } , { offset: function() {
+    //     return -this.element.clientHeight;
+    //   } } );
+    //   $('.fh5co-section').each(function() {
+    //     $(this).waypoint( function( direction ) {
+    //       if (direction == 'down') {
+    //         if(this.element.classList.contains('fh5co-section--white'))
+    //           $('.js-fh5co-nav-toggle').removeClass('fh5co-nav-white');
+    //         if(this.element.classList.contains('fh5co-section--black'))
+    //           $('.js-fh5co-nav-toggle').addClass('fh5co-nav-white');
+    //       }
+    //     } , { offset: '5%' } );
+    //   });
+    //   $('.fh5co-section').each(function() {
+    //     $(this).waypoint( function( direction ) {
+    //       if (direction == 'up') {
+    //         if(this.element.classList.contains('fh5co-section--white'))
+    //           $('.js-fh5co-nav-toggle').removeClass('fh5co-nav-white');
+    //         if(this.element.classList.contains('fh5co-section--black'))
+    //           $('.js-fh5co-nav-toggle').addClass('fh5co-nav-white');
+    //       }
+    //     } , { offset: function() {
+    //       return -this.element.clientHeight;
+    //     } } );
+    //   });
+    //   // $('.js-fh5co-nav-toggle').addClass('fh5co-nav-white');
+    // };
 
 
     $scope.contentWayPoint = function() {
@@ -203,7 +219,7 @@
 
     $scope.$on("$includeContentLoaded", function(event, templateName){
      $scope.contentWayPoint();
-     $scope.burgerWayPoint();
+     // $scope.burgerWayPoint();
      $scope.videoWayPoint();
    });
 

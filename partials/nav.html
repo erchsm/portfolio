@@ -1,4 +1,4 @@
-<nav class="fh5co-nav">
+<!-- <nav class="fh5co-nav">
  <div class="container-fluid">
   <div class="row">
     <div class="col-xs-6 text-left">
@@ -11,6 +11,46 @@
       </a>
     </div>
   </div>
+</div>
+</nav> -->
+<nav class="fh5co-nav">
+ <div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-6 text-left">
+      <span ng-click="burgerMenu()" class="js-fh5co-nav-toggle fh5co-nav-toggle fh5co-nav-white">
+        <span class="nav-section">
+          <span ng-show="$state.includes('home')">H</span>
+          <span ng-show="$state.includes('micro-app-interactions')">P1</span>
+          <span ng-show="$state.includes('micro-app-templates')">P2</span>
+          <span ng-show="$state.includes('cisco')">P3</span>
+          <span ng-show="$state.includes('protohack-givjoy')">P4</span>
+          <span ng-show="$state.includes('perforce')">P5</span>
+          <span ng-show="$state.includes('about')">A</span>
+          <span ng-show="$state.includes('resume')">R</span>
+        </span>
+        <div class="lines"></div>
+        <div class="nav-numbers-list">
+          <a href="#project-0" du-scrollspy="project-0" class="nav-number">1</a>
+          <a href="#project-1" du-scrollspy="project-1" class="nav-number">2</a>
+          <a href="#project-2" du-scrollspy="project-2" class="nav-number">3</a>
+          <a href="#project-3" du-scrollspy="project-3" class="nav-number">4</a>
+          <a href="#project-4" du-scrollspy="project-4" class="nav-number">5</a>
+          <a href="#project-5" du-scrollspy="project-5" class="nav-number">6</a>
+          <a href="#project-6" du-scrollspy="project-6" class="nav-number">7</a>
+          <a href="#project-7" du-scrollspy="project-7" class="nav-number">8</a>
+          <a href="#project-8" du-scrollspy="project-8" class="nav-number">9</a>
+          <a href="#project-9" du-scrollspy="project-9" class="nav-number">10</a>
+          <a href="#project-10" du-scrollspy="project-10" class="nav-number">11</a>
+          <a href="#project11"" du-scrollspy="project-11" class="nav-number">12</a>
+        </div>
+      </span>
+    </div>
+    <div ng-if="$state.includes('resume')" class="col-xs-6 text-right">
+      <a target="_blank" href="/resume/ericsmith-resume.pdf" class="download-pdf">
+        <span>Download PDF</span>
+        <i class="icon-download"></i>
+      </a>
+    </div>
 </div>
 </nav>
 <nav id="fh5co-offcanvas">

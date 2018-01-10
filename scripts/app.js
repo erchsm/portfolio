@@ -6,6 +6,7 @@
 
   angular.module('myApp', [
     'ui.router',
+    'duScroll',
     'myApp.directives',
     'myApp.controllers'
     ])
