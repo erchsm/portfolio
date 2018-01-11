@@ -1,9 +1,10 @@
-$width: 50px;
+$width: 48px;
 $font-size: 19px;
 
 .fh5co-nav-toggle {
 	transform: translateX(-30px);
 	width: $width;
+	pointer-events: all;
 	cursor: pointer;
 
 	display: flex;
@@ -23,7 +24,7 @@ $font-size: 19px;
 		font-size: $font-size;
 		height: $font-size;
 		line-height: 1;
-		@include transition(all _animation(duration) / 3 _animation(easing));
+		transition: opacity (_animation(duration) / 3) _animation(easing), transform (_animation(duration) / 3) _animation(easing);
 	}
 
 	.nav-number {
@@ -33,7 +34,7 @@ $font-size: 19px;
 		font-weight: 200;
 		text-align: center;
 		color: lighten(_palette($theme,brand-black), 0%);
-		@include transition(all _animation(duration) / 3 _animation(easing));
+		transition: opacity (_animation(duration) / 3) _animation(easing), transform (_animation(duration) / 3) _animation(easing);
 		@include translateY(#{-1 * $font-size});
 		opacity: 0;
 

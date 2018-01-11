@@ -1001,6 +1001,8 @@ h1, h2, h3, h4, h5, h6, figure {
     }
 
     > a {
+      animation-timing-function: _animation(easing2);
+      animation-duration: (_animation(duration) * 2);
       display: block;
       color: _palette($theme,brand-black);
       position: relative;
@@ -1412,7 +1414,13 @@ h1, h2, h3, h4, h5, h6, figure {
   }
 }
 
+.animate-box {
+  // animation-duration: _animation(duration);
+  animation-timing-function:  _animation(easing2);
+}
+
 .download-pdf {
+  pointer-events: all;
   display: flex;
   flex-direction: row;
   align-items: center;
