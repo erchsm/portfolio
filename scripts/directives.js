@@ -9,7 +9,7 @@
     var injectScript = function(element) {
       var scriptTag = angular.element(document.createElement('script'));
       scriptTag.attr('charset', 'utf-8');
-      scriptTag.attr('src', '//assets.codepen.io/assets/embed/ei.js');
+      scriptTag.attr('src', '//codepen.io/eijs.js');
       element.append(scriptTag);
     };
 
@@ -28,6 +28,17 @@
       }
     };
   })
+  // .directive('progressBar', function () {
+  //   return {
+  //     link: function(scope, element, attrs) {
+  //       scope.$on('duScrollspy:becameActive', function($event, $element, $target){
+  //         if ($element.attr('id') == element.attr('id')) {
+            
+  //         } 
+  //       });
+  //     }
+  //   };
+  // })
   .directive('videoPlayer', function($templateRequest, $compile) {
     return {
       link: function(scope, element) {

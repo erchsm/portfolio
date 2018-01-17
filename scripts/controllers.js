@@ -12,7 +12,13 @@
     $scope.$on('duScrollspy:becameActive', function($event, $element, $target){
       //Automaticly update location
       if (angular.element($element).prop("tagName") != "A") {
-        console.log($element);
+        var numSections = $("div[du-scrollspy]").length + 1;
+        var currentSection = parseInt(angular.element($element).prop('id').split('-').pop()) + 1;
+        var percentScrolled = Math.floor((currentSection / numSections) * 100);
+        $('.progress-number--total').text(numSections);
+        $('.progress-number--current').text(currentSection);
+        $('#progress-bar').removeClass().addClass(('height' + percentScrolled));
+        // $('#progress-bar').addClass('fh5co-nav-white');
         if(!angular.element($element).hasClass('fh5co-section--white')) {
           $('.js-fh5co-nav-toggle').addClass('fh5co-nav-white');
         } else {
