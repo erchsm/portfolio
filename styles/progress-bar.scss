@@ -51,7 +51,7 @@
   .progress-number {
     text-align: center;
     width: 100%;
-    // color: darken(_palette($theme,brand-gray), 10%);
+    // color: lighten(_palette($theme,brand-gray), 0%);
 
     &--current {
 

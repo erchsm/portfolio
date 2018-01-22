@@ -27,6 +27,11 @@
       templateUrl: 'views/about.html',
       controller  : 'mainController'
     })
+    .state('process', {
+      url: '/process',
+      templateUrl: 'views/process.html',
+      controller  : 'mainController'
+    })
     .state('micro-app-interactions', {
       url: '/micro-app-interactions',
       templateUrl: 'views/micro-app-interactions.html',
