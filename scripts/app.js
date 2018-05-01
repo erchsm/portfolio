@@ -32,6 +32,11 @@
       templateUrl: 'views/process.html',
       controller  : 'mainController'
     })
+    .state('american-made', {
+      url: '/american-made',
+      templateUrl: 'views/american-made.html',
+      controller  : 'mainController'
+    })
     .state('micro-app-interactions', {
       url: '/micro-app-interactions',
       templateUrl: 'views/micro-app-interactions.html',

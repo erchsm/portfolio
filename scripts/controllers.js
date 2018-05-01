@@ -21,8 +21,10 @@
         // $('#progress-bar').addClass('fh5co-nav-white');
         if(!angular.element($element).hasClass('fh5co-section--white')) {
           $('.js-fh5co-nav-toggle').addClass('fh5co-nav-white');
+          $('.sidebar-container').addClass('white');
         } else {
           $('.js-fh5co-nav-toggle').removeClass('fh5co-nav-white');
+          $('.sidebar-container').removeClass('white');
         }
       }
       // var hash = $element.prop('hash');

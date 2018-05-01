@@ -17,14 +17,15 @@
  <div class="container-fluid">
   <div class="row">
     <div class="col-xs-6 text-left">
-      <span ng-click="burgerMenu()" class="js-fh5co-nav-toggle fh5co-nav-toggle fh5co-nav-white">
+      <span ng-click="burgerMenu()" class="js-fh5co-nav-toggle fh5co-nav-toggle" ng-class="{'fh5co-nav-white': !$state.is('process')&&!$state.is('resume')&&!$state.is('about')}">
         <span class="nav-section">
           <span ng-show="$state.includes('home')">H</span>
-          <span ng-show="$state.includes('micro-app-interactions')">P1</span>
-          <span ng-show="$state.includes('micro-app-templates')">P2</span>
-          <span ng-show="$state.includes('cisco')">P3</span>
-          <span ng-show="$state.includes('protohack-givjoy')">P4</span>
-          <span ng-show="$state.includes('perforce')">P5</span>
+          <span ng-show="$state.includes('american-made')">P1</span>
+          <span ng-show="$state.includes('micro-app-interactions')">P2</span>
+          <span ng-show="$state.includes('micro-app-templates')">P3</span>
+          <span ng-show="$state.includes('cisco')">P4</span>
+          <span ng-show="$state.includes('protohack-givjoy')">P5</span>
+          <span ng-show="$state.includes('perforce')">P6</span>
           <span ng-show="$state.includes('about')">A</span>
           <span ng-show="$state.includes('resume')">R</span>
           <span ng-show="$state.includes('process')">P</span>
@@ -63,13 +64,15 @@
           <li><a ng-class="{active: $state.includes('home')}" href="/">Home</a></li>
           <li class="offcanvas-has-dropdown"><a>Projects</a>
             <ul class="dropdown">
+              <li ><a ng-class="{active: $state.includes('american-made')}" href="/american-made">American Made</a></li>
               <li ><a ng-class="{active: $state.includes('micro-app-interactions')}" href="/micro-app-interactions">Micro App Interactions</a></li>
-              <li><a ng-class="{active: $state.includes('micro-app-templates')}"" href="/micro-app-templates">Micro App Templates</a></li>
+              <li><a ng-class="{active: $state.includes('micro-app-templates')}" href="/micro-app-templates">Micro App Templates</a></li>
               <li><a ng-class="{active: $state.includes('protohack-givjoy')}" href="/protohack-givjoy">Protohack & Givjoy</a></li>
               <li><a ng-class="{active: $state.includes('perforce')}" href="/perforce">Perforce</a></li>
               <li><a ng-class="{active: $state.includes('cisco')}" href="/cisco">Cisco</a></li>
             </ul>
           </li>
+          <li><a ng-class="{active: $state.includes('process')}" href="/process">Process</a></li>
           <li><a ng-class="{active: $state.includes('about')}" href="/about">About Me</a></li>
           <!-- <li><a href="mailto:hi@ericsmithux.com?Subject=Hello%21&amp;Body=Was%20looking%20at%20your%20website%20and%20wanted%20to%20say%20hello%21">Say Hello</a></li> -->
           <li><a ng-class="{active: $state.includes('resume')}" href="/resume">Resume</a></li>

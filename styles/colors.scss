@@ -15,7 +15,7 @@ $palette: (
     brand-black: #333031,
     brand-gray: #DEDEDC,
     brand-blue: #234CDB,
-    brand-light-gray: tint(#dededc,60%)
+    brand-light-gray: lighten(#dededc,60%)
   )
 );
 

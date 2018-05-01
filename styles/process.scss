@@ -18,13 +18,41 @@
     padding-right: 6vw;
     
     h3 {
+      color: lighten(_palette($theme, brand-black), 30%);
+      font-family: 'serif';
       font-weight: 200;
+      text-align: center;
       font-size: 32px;
+
+      &:before, &:after {
+        position: absolute;
+        font-size: 72px;
+        opacity: 0.24;
+      }
+
+      &:before {
+        transform: translate(-21px, -12px);
+        content: '“';
+      }
+      &:after {
+        transform: translate(60px, 12px);
+        content: '”';
+      }
     }
 
     p {
-      color: #999999;
+      margin-left: 3%;
+      margin-right: 3%;
+      text-align: center;
+      // color: #999999;
+      letter-spacing: 0.03em;
+      font-size: 15px;
+    }
 
+    hr {
+      width: 48px;
+      height: 1px;
+      background: lighten(_palette($theme, brand-black), 48%);
     }
   }
 }
@@ -137,7 +165,7 @@
   position: absolute;
   width: 55%;
   height: 55%;
-  background: #fafafa;
+  background: #FFF;
 }
 .q1 {
   top: 0;
@@ -242,6 +270,78 @@
   fill: transparent;
   vector-effect: non-scaling-stroke;
 }
+#grad-arc-1 {
+  stop {
+    stop-color: darken(_palette($theme,brand-primary), 10%);
+
+    ~ stop {
+      stop-color: darken(_palette($theme,brand-primary), 0%);
+    }
+  }
+}
+#grad-arc-2 {
+  stop {
+    stop-color: darken(_palette($theme,brand-primary), 0%);
+
+    ~ stop {
+      stop-color: lighten(_palette($theme,brand-primary), 10%);
+    }
+  }
+}
+#grad-arc-3 {
+  stop {
+    stop-color: lighten(_palette($theme,brand-primary), 10%);
+
+    ~ stop {
+      stop-color: lighten(_palette($theme,brand-primary), 20%);
+    }
+  }
+}
+#grad-arc-4 {
+  stop {
+    stop-color: lighten(_palette($theme,brand-primary), 20%);
+
+    ~ stop {
+      stop-color: lighten(_palette($theme,brand-primary), 10%);
+    }
+  }
+}
+#grad-arc-5 {
+  stop {
+    stop-color: lighten(_palette($theme,brand-primary), 10%);
+
+    ~ stop {
+      stop-color: lighten(_palette($theme,brand-primary), 0%);
+    }
+  }
+}
+#grad-arc-6 {
+  stop {
+    stop-color: lighten(_palette($theme,brand-primary), 0%);
+
+    ~ stop {
+      stop-color: darken(_palette($theme,brand-primary), 10%);
+    }
+  }
+}
+#grad-arc-7 {
+  stop {
+    stop-color: darken(_palette($theme,brand-primary), 10%);
+
+    ~ stop {
+      stop-color: darken(_palette($theme,brand-primary), 20%);
+    }
+  }
+}
+#grad-arc-8 {
+  stop {
+    stop-color: darken(_palette($theme,brand-primary), 20%);
+
+    ~ stop {
+      stop-color: darken(_palette($theme,brand-primary), 10%);
+    }
+  }
+}
 .step__arc.step__arc-1 {
   stroke: url(#grad-arc-1);
 }
@@ -297,46 +397,6 @@
 .step__info.active:hover .step__role {
   opacity: 1;
   transition: opacity 0.2s ease-in-out;
-}
-.step-1 .step__info {
-  bottom: 0;
-  left: 60px;
-  transform: translate(0, 0);
-}
-.step-2 .step__info {
-  top: 0;
-  left: 80px;
-  transform: translate(0, 0);
-}
-.step-3 .step__info {
-  top: 0;
-  left: 60px;
-  transform: translate(0, 0);
-}
-.step-4 .step__info {
-  top: 100%;
-  left: 20px;
-  transform: translate(0, 20px);
-}
-.step-5 .step__info {
-  top: calc(100% + 20px);
-  left: 50%;
-  transform: translate(-45%, 0);
-}
-.step-6 .step__info {
-  top: 0;
-  right: 30px;
-  transform: translate(0, -15%);
-}
-.step-7 .step__info {
-  top: 0;
-  right: 30px;
-  transform: translate(0, -65%);
-}
-.step-8 .step__info {
-  top: -20px;
-  right: 0px;
-  transform: translate(0, -100%);
 }
 .step__role {
   position: absolute;
@@ -450,29 +510,45 @@
   color: black;
   opacity: 0;
 }
-.step-1 .step__title {
-  color: #FF6701;
+.step-1 {
+  .step__title, .step__svg {
+    color: darken(_palette($theme,brand-primary), 10%);
+  }
 }
-.step-2 .step__title {
-  color: #EA610C;
+.step-2 {
+  .step__title, .step__svg {
+    color: darken(_palette($theme,brand-primary), 0%);
+  }
 }
-.step-3 .step__title {
-  color: #D45B17;
+.step-3 {
+  .step__title, .step__svg {
+    color: lighten(_palette($theme,brand-primary), 10%)
+  }
 }
-.step-4 .step__title {
-  color: #BF5522;
+.step-4 {
+  .step__title, .step__svg {
+    color: lighten(_palette($theme,brand-primary), 20%)
+  }
 }
-.step-5 .step__title {
-  color: #A94F2E;
+.step-5 {
+  .step__title, .step__svg {
+    color: lighten(_palette($theme,brand-primary), 10%)
+  }
 }
-.step-6 .step__title {
-  color: #944939;
+.step-6 {
+  .step__title, .step__svg {
+    color: lighten(_palette($theme,brand-primary), 0%)
+  }
 }
-.step-7 .step__title {
-  color: #7E4344;
+.step-7 {
+  .step__title, .step__svg {
+    color: darken(_palette($theme,brand-primary), 10%);
+  }
 }
-.step-8 .step__title {
-  color: #693D4F;
+.step-8 {
+  .step__title, .step__svg {
+    color: darken(_palette($theme,brand-primary), 20%);
+  }
 }
 .step__text {
   font-size: 13px;
@@ -490,7 +566,7 @@
   position: absolute;
   width: 55%;
   height: 55%;
-  background: #fafafa;
+  background: #FFF;
 }
 .q1 {
   top: 0;
@@ -551,45 +627,13 @@
   cursor: pointer;
 }
 .step__spot-fill {
-  fill: #FAFAFA;
+  fill: #FFF;
 }
 .step__spot-circle {
-  fill: #FAFAFA;
+  fill: #FFF;
   stroke: #999999;
   vector-effect: non-scaling-stroke;
   stroke-width: 0.7;
-}
-.step-1 .is-checked .step__spot-circle {
-  stroke: #FF6701;
-  fill: #FF6701;
-}
-.step-2 .is-checked .step__spot-circle {
-  stroke: #EA610C;
-  fill: #EA610C;
-}
-.step-3 .is-checked .step__spot-circle {
-  stroke: #D45B17;
-  fill: #D45B17;
-}
-.step-4 .is-checked .step__spot-circle {
-  stroke: #BF5522;
-  fill: #BF5522;
-}
-.step-5 .is-checked .step__spot-circle {
-  stroke: #A94F2E;
-  fill: #A94F2E;
-}
-.step-6 .is-checked .step__spot-circle {
-  stroke: #944939;
-  fill: #944939;
-}
-.step-7 .is-checked .step__spot-circle {
-  stroke: #7E4344;
-  fill: #7E4344;
-}
-.step-8 .is-checked .step__spot-circle {
-  stroke: #693D4F;
-  fill: #693D4F;
 }
 .step__arc {
   stroke-width: 1.4;
@@ -675,7 +719,7 @@
 }
 .step-7 .step__info {
   top: 0;
-  right: 30px;
+  right: 40px;
   transform: translate(0, -65%);
 }
 .step-8 .step__info {
@@ -694,6 +738,10 @@
 .step__svg {
   position: relative;
   bottom: 0;
+
+  width: 48px;
+  height: 48px;
+  font-size: 40px;
 }
 .step__header {
   position: relative;
@@ -716,30 +764,6 @@
   line-height: 1.1;
   color: black;
   opacity: 0;
-}
-.step-1 .step__title {
-  color: #FF6701;
-}
-.step-2 .step__title {
-  color: #EA610C;
-}
-.step-3 .step__title {
-  color: #D45B17;
-}
-.step-4 .step__title {
-  color: #BF5522;
-}
-.step-5 .step__title {
-  color: #A94F2E;
-}
-.step-6 .step__title {
-  color: #944939;
-}
-.step-7 .step__title {
-  color: #7E4344;
-}
-.step-8 .step__title {
-  color: #693D4F;
 }
 .step__text {
   font-size: 13px;

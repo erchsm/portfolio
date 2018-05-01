@@ -1,8 +1,10 @@
+$height: 24vh;
+
 #progress-bar {
   position: fixed;
   z-index: 1901;
   width: 30px;
-  top: 10vh;
+  bottom: 0vh;
   right: 0;
   @include flex();
   @include flex-align-items(center);
@@ -14,7 +16,6 @@
   @include transition($transition);
 
   .progress-line {
-    $height: 36vh;
     height: $height;
     width: 1px;
 
@@ -38,7 +39,7 @@
 
   @for $i from 1 through 100 {
     &.height#{$i} {
-      transform: translateY(#{$i * 0.24}vh);
+      // transform: translateY(#{$i * 0.24}vh);
 
       .progress-line {
         &--foreground {

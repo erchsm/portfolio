@@ -16,6 +16,7 @@
 
 @import 'progress-bar';
 @import 'process';
+@import 'sidebar';
 
 
 $grid-gutter-width: 40px !default;
@@ -44,6 +45,20 @@ b, strong {
   position: relative;
   overflow-x: hidden;
   background: _palette($theme,brand-white);
+
+  // &:before, &:after {
+  //   content: '';
+  //   position: absolute;
+  //   width: 1px;
+  //   width: 88%;
+  //   height: 100%;
+  //   border: solid 1px;
+  //   border-width: 0 1px 0 1px;
+  //   border-color: lighten(_palette($theme,brand-black), 24%);
+  // }
+  // &:before {
+  //   left: 6%;
+  // }
 
   #fh5co-offcanvas {
     position: fixed;
@@ -146,7 +161,9 @@ b, strong {
           }
         }
         &.offcanvas-has-dropdown {
-          &:hover, &:focus {
+          margin: 35px 0;
+          padding: 0;
+          &:hover {
             > ul {
               margin-top: 10px;
               height: 100%;
