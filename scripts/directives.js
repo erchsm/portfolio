@@ -9,7 +9,7 @@
     var injectScript = function(element) {
       var scriptTag = angular.element(document.createElement('script'));
       scriptTag.attr('charset', 'utf-8');
-      scriptTag.attr('src', '//codepen.io/eijs.js');
+      scriptTag.attr('src', '//static.codepen.io/assets/embed/ei.js');
       element.append(scriptTag);
     };
 
