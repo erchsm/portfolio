@@ -2,7 +2,9 @@ $width: 48px;
 $font-size: 17px;
 
 .fh5co-nav-toggle {
-	transform: translateX(-30px);
+	position: fixed;
+	left: 0;
+	// transform: translateX(-30px);
 	width: $width;
 	pointer-events: all;
 	cursor: pointer;
