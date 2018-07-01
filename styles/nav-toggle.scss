@@ -91,7 +91,7 @@ $font-size: 17px;
 		.nav-section {
 			@include translateY(-14px);
 			opacity: 0;
-		} 
+		}
 		.nav-number {
 			@include translateY(14px);
 			opacity: 0;
@@ -169,16 +169,16 @@ $font-size: 17px;
 		}
 	}
 	@media screen and (max-width: $screen-sm) {
-		width: 45px;
+		width: 40px;
 
 		.lines {
 			&, &:before, &:after {
-				width: 45px;
+				width: 40px;
 			}
 		}
 		.nav-section, .nav-numbers-list {
-			font-size: 17px;
-			height: 17px;
+			font-size: 15px;
+			height: 15px;
 		}
 	}
 }

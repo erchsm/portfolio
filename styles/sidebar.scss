@@ -1,3 +1,5 @@
+$color-black: _palette($theme,brand-black);
+
 .sidebar-container {
     height: 100%;
     width: 100px;
@@ -15,14 +17,18 @@
     top: 0;
     z-index: 48;
 
+    p {
+        font-weight: 700;
+        letter-spacing: 0.012em;
+        color: #fff;
+    }
+
     &:hover {
         width: 280px;
     }
 
     .sidebar {
         width: 94px;
-        font-weight: 700;
-        color: #fff;
         padding: 0;
         transition: all _animation(easing3) 0.3s
     }
@@ -110,6 +116,7 @@
 
     .sidebar:hover {
         width: 100%;
+        // background: rgba(_palette($theme,brand-white), .6);
         transition: all _animation(easing3) 0.3s 0.3s;
 
         .sidebar-item {
@@ -120,7 +127,7 @@
                 &:after {
                     opacity: 1;
                     width: 100%;
-                    background: #425453;
+                    background: $color-black;
                 }
                 .sidebar-number {
                     color: #fff
@@ -177,6 +184,20 @@
 
         .sidebar-label {
             color: #fff
+        }
+    }
+    @media screen and (max-width: $screen-sm) {
+        .sidebar {
+            .sidebar-item {
+                height: 36px;
+                line-height: 55px;
+            }
+            &:hover {
+                .sidebar-item {
+                    height: 55px;
+                    line-height: 55px;
+                }
+            }
         }
     }
 }
