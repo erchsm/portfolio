@@ -566,7 +566,7 @@ h1, h2, h3, h4, h5, h6, figure {
     height: 80vh;
 
     @media screen and (max-width: $screen-sm) {
-      height: 90vh;
+      height: 72vh;
     }
 
     .display-t,
@@ -576,7 +576,7 @@ h1, h2, h3, h4, h5, h6, figure {
       width: 100%;
 
       @media screen and (max-width: $screen-sm) {
-        height: 90vh;
+        height: 72vh;
       }
     }
   }
@@ -724,32 +724,32 @@ h1, h2, h3, h4, h5, h6, figure {
     h1 {
       @include headingJumbo();
 
-      @keyframes ghostHeader {
-        0% {
-          opacity: 0;
-          transform: translateY(100px) skewX(6deg);
-          // filter: blur(3px);
-        }
-        100% {
-          opacity: 1;
-          transform: translateY(0) skewX(0deg);
-          // filter: blur(0px);
-        }
-      }
+      // @keyframes ghostHeader {
+      //   0% {
+      //     opacity: 0;
+      //     transform: translateY(100px) skewX(6deg);
+      //     // filter: blur(3px);
+      //   }
+      //   100% {
+      //     opacity: 1;
+      //     transform: translateY(0) skewX(0deg);
+      //     // filter: blur(0px);
+      //   }
+      // }
 
-      span {
-        display: inline-block;
-        opacity: 0;
-        transform: translateY(60px) skewX(6deg);
-        @include animation(ghostHeader _animation(duration-longest) _animation(easing));
-        animation-fill-mode: forwards;
+      // span {
+      //   display: inline-block;
+      //   opacity: 0;
+      //   transform: translateY(60px) skewX(6deg);
+      //   @include animation(ghostHeader _animation(duration-longest) _animation(easing));
+      //   animation-fill-mode: forwards;
 
-        @for $i from 1 through 18 {
-          &:nth-child(#{$i}) {
-            @include animation-delay(#{$i * 0.06}s);
-          }
-        }
-      }
+      //   @for $i from 1 through 18 {
+      //     &:nth-child(#{$i}) {
+      //       @include animation-delay(#{$i * 0.06}s);
+      //     }
+      //   }
+      // }
     }
 
     h2 {
